@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gota : Item
+public class Objeto : Item
 {
     public override void DestroyItem()
     {

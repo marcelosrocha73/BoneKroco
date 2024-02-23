@@ -3,31 +3,31 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using UnityEngine.UI;
-//using UnityEngime.InputSystem;
+using UnityEngine.InputSystem;
 
 
 public class Krocinho : MonoBehaviour
 {
-    public float Speed;
-    public float JumpForce;
-    public bool isJumping;
-    public bool doubleJump;
+    public float _speed;
+    public float _jumpForce;
+    public bool _isJumping;
+    public bool _doubleJump;
     
     private Rigidbody2D _rgb;
 
    [SerializeField] CharacterController controller;
-   [SerializeField] Vector3 _move;
+   [SerializeField] Vector3 _mover;
    [SerializeField] bool groundedPlayer;
-   [SerializeField] float playerSpeed = 2.0f;
-   [SerializeField] float jumpHeight = 1.0f;
+   //[SerializeField] float playerSpeed = 2.0f;
+   [SerializeField] float puloHeight = 1.0f;
    private Vector3 playerVelocity;
    private float gravityValue = -9.81f;
-   PlayerPontos _playerPontos;
+   KrocoPonto _playerPontos;
 
     // Start is called before the first frame update
     void Start()
     {
-        _playerPontos = Camera.main.GetComponent<PlayerPontos>();
+        _playerPontos = Camera.main.GetComponent<KrocoPonto>();
         _rgb = GetComponent<Rigidbody2D>();
     }
 
@@ -42,26 +42,26 @@ public class Krocinho : MonoBehaviour
 
         Move();
         Jump();
-        //Gravity();
+        Gravity();
     }
 
-    public void SetMove(inputAction.CallbackContext value)
+    public void SetMover(inputAction.CallbackContext value)
     {
-        _move = value.ReadValue<Vector3>();
+     _mover = value.ReadValue<Vector3>();
     }
 
-    public void SetJump(InputAction.CallbackContext value)
+    public void SetPulo(InputAction.CallbackContext value)
     {
         if (groundedPlayer)
         {
-            playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+            playerVelocity.y += Mathf.Sqrt(puloHeight * -3.0f * gravityValue);
         }
     }
 
     void Move()
     {
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
-        transform.position += movement * Time.deltaTime * Speed;
+        transform.position += movement * Time.deltaTime * _speed;
         if (Input.GetAxis("Horizontal") > 0f)
         {
             transform.eulerAngles = new Vector3(0f, 0f, 0f);
@@ -76,17 +76,17 @@ public class Krocinho : MonoBehaviour
     {
       if (Input.GetButtonDown("Jump"))
       {
-            if (!isJumping)
+            if (!_isJumping)
             {
-                _rgb.AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
-                doubleJump = true;
+                _rgb.AddForce(new Vector2(0f, _jumpForce), ForceMode2D.Impulse);
+                _doubleJump = true;
             }
             else
             {
-                if(doubleJump)
+                if(_doubleJump)
                 {
-                    _rgb.AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
-                    doubleJump = false;
+                    _rgb.AddForce(new Vector2(0f, _jumpForce), ForceMode2D.Impulse);
+                    _doubleJump = false;
                 }
             }
         
@@ -96,14 +96,14 @@ public class Krocinho : MonoBehaviour
     {
         if (collision.gameObject.layer == 3)
         {
-            isJumping = false;
+            _isJumping = false;
         }
     }
     void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.layer == 3)
         {
-            isJumping = true;
+            _isJumping = true;
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -116,9 +116,9 @@ public class Krocinho : MonoBehaviour
       }
     }
     
-    //void Gravity()
-    //{
-    //    playerVelocity.y += gravityValue * Time.deltaTime;
-    //    controller.Move(playerVelocity * Time.deltaTime;
-    //}
+    void Gravity()
+    {
+        playerVelocity.y += gravityValue * Time.deltaTime;
+        controller.Mover(playerVelocity * Time.deltaTime;
+    }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemPool : MonoBehaviour
 {
-    // Start is called before the first frame update
+    //public static GotaPool SharedInstance;
     public List<GameObject> pooledObjects;
     public GameObject objectToPool;
     public int amountToPool;
@@ -22,7 +22,7 @@ public class ItemPool : MonoBehaviour
         {
             tmp = Instantiate(objectToPool);
             tmp.SetActive(false);
-            pollObjects.Add(tmp);
+            pooledObjects.Add(tmp);
         }
     }
 
@@ -35,5 +35,6 @@ public class ItemPool : MonoBehaviour
                 return pooledObjects[i];
             }
         }
+        return null;
     }
 }

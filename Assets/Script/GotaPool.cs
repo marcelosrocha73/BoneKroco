@@ -5,12 +5,11 @@ using UnityEngine.Pool;
 
 public class GotaPool : ItemPool
 {
-    public static GotaPool SharedInstance; // nomo do titulo do script tem que ser o mesmo nome 
+    public static GotaPool SharedInstance;
+    
 
-
-    void Awake()
+    protected virtual void Awake()
     {
         SharedInstance = this;
     }
-    
 }

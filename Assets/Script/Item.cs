@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    // Start is called before the first frame update
     [SerializeField] private string _nome;
     [SerializeField] private int _tipo;
     [SerializeField] private int _valor;
@@ -16,7 +15,7 @@ public class Item : MonoBehaviour
         _textura = GetComponent<MeshRenderer>(); //chama a textura
     }
 
-    protected virtual void DestroyItem()
+    public virtual void DestroyItem()
     {
 
     }
@@ -29,8 +28,8 @@ public class Item : MonoBehaviour
     //pesquisar get set C#
     public virtual string Nome
     {
-        get { return _nome; } //get
-        set { _nome = value; } //set
+        get { return _nome; } //get - puxar
+        set { _nome = value; } //set - enviar
     }
     public virtual int Tipo
     {

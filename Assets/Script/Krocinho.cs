@@ -45,10 +45,10 @@ public class Krocinho : MonoBehaviour
         Gravity();
     }
 
-    public void SetMover(inputAction.CallbackContext value)
-    {
-     _mover = value.ReadValue<Vector3>();
-    }
+    //public void SetMover(inputAction.CallbackContext value) por que do erro ao ativar
+    //{
+    // _mover = value.ReadValue<Vector3>();
+    //}
 
     public void SetPulo(InputAction.CallbackContext value)
     {
@@ -119,6 +119,6 @@ public class Krocinho : MonoBehaviour
     void Gravity()
     {
         playerVelocity.y += gravityValue * Time.deltaTime;
-        controller.Mover(playerVelocity * Time.deltaTime;
+        //controller.Mover(playerVelocity * Time.deltaTime;
     }
 }

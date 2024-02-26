@@ -8,7 +8,7 @@ public class GotaPool : ItemPool
     public static GotaPool SharedInstance;
     
 
-    protected virtual void Awake()
+    protected override void Awake()
     {
         SharedInstance = this;
     }

@@ -8,7 +8,7 @@ public class ObjetoPool : ItemPool
     public static ObjetoPool SharedInstance;
 
 
-    protected virtual void Awake()
+    protected override void Awake()
     {
         SharedInstance = this;
     }

@@ -13,7 +13,7 @@ public class ItemControl : MonoBehaviour
 
     private void Start()
     {
-        invoke("ItemOn", 1)
+        Invoke("ItemOn", 1);
     }
 
     void ItemOn()
@@ -25,7 +25,7 @@ public class ItemControl : MonoBehaviour
         }
 
         Shuffle(_posObjeto);
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 3; i++)
         {
             ObjetoOn(i);
         }

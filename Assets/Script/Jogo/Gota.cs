@@ -10,7 +10,8 @@ public class Gota : MonoBehaviour
     Rigidbody2D _rgb;
     Transform _gota;
     public int _pontos;
-    
+
+
     void Start()
     {
         
@@ -22,14 +23,14 @@ public class Gota : MonoBehaviour
       {
              //_sprd.enabled = false;
              //_cpsl.enabled = false;
-            //PontosGotas.instance._totalPontos += _pontos;
-            //PontosGotas.instance.UpdatePontoText();
+            PontosGotas.instance._totalPontos += _pontos;
+            PontosGotas.instance.UpdatePontoText();
             Destroy(gameObject);
       }
 
       if (collider.gameObject.tag == "ground")
       {
-            //Debug.Log("levou o farelo");
+            Debug.Log("levou o farelo");
             Destroy(gameObject);
       }
 
@@ -43,11 +44,7 @@ public class Gota : MonoBehaviour
             Destroy(gameObject);
         }
         
-   //     if (collision.gameObject.tag == "ground")
-   //     {
-   //         Debug.Log("levou o farelo");
-   //     }
-   //             
+         
     }
 
     //void Resetar()

@@ -16,11 +16,11 @@ public class Objeto : MonoBehaviour
 
     //movimento de objeto por distancia
     private Rigidbody2D _rgb;
-    public Transform _rightCol;
-    public Transform _leftCol;
-    public Transform _headPoint;
-    private bool colliding;
-    public LayerMask _layer;
+    //public Transform _rightCol;
+   //public Transform _leftCol;
+    //public Transform _headPoint;
+   // private bool colliding;
+   // public LayerMask _layer;
 
 
     void Start ()
@@ -32,28 +32,28 @@ public class Objeto : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            float height = collision.contacts[0].point.y - _headPoint.position.y;
-            Invoke("Objetotrg", _objetoTime);
-            if(height > 0)
-            {
-                collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 3, ForceMode2D.Impulse);
-            }
-        }
+       // if (collision.gameObject.tag == "Player")
+       // {
+         //   float height = collision.contacts[0].point.y - _headPoint.position.y;
+         //   Invoke("Objetotrg", _objetoTime);
+         //   if(height > 0)
+         //   {
+           //     collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 3, ForceMode2D.Impulse);
+           // }
+        //}
     }
 
     void Update()
     // movimento de objeto para os lados
     {
         _rgb.velocity = new Vector2(_speed, _rgb.velocity.y);
-        colliding = Physics2D.Linecast(_rightCol.position, _leftCol.position, _layer);
+        //colliding = Physics2D.Linecast(_rightCol.position, _leftCol.position, _layer);
 
-        if(colliding)
-        {
-            transform.localScale = new Vector2(transform.localScale.x * -1f, transform.localScale.y);
-            _speed = -_speed;
-        }
+       // if(colliding)
+        //{
+        //    transform.localScale = new Vector2(transform.localScale.x * -1f, transform.localScale.y);
+        //    _speed = -_speed;
+        //}
     }
         //movimento de personagem por tempo
     //{

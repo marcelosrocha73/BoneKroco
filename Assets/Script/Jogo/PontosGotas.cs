@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PontosGotas : MonoBehaviour
 {
-    public int totalPontos;
-    public Text pontosText;
+    public int _totalPontos;
+    public TextMeshProUGUI pontosText;
 
     public GameObject gameOver;
     
@@ -21,7 +22,7 @@ public class PontosGotas : MonoBehaviour
 
     public void UpdatePontoText()
     {
-      pontosText.text = totalPontos.ToString();
+      pontosText.text = _totalPontos.ToString();
     }
 
     public void ShowGameOver()

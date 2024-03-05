@@ -4,13 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Gota
+  - Objt
   - Item
+  - ground
+  - gota
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - 
   - Water
   - UI
   - 

@@ -32,15 +32,15 @@ public class Objeto : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-       // if (collision.gameObject.tag == "Player")
-       // {
-         //   float height = collision.contacts[0].point.y - _headPoint.position.y;
-         //   Invoke("Objetotrg", _objetoTime);
-         //   if(height > 0)
-         //   {
-           //     collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 3, ForceMode2D.Impulse);
-           // }
-        //}
+        if (collision.gameObject.tag == "Player")
+        {
+          //float height = collision.contacts[0].point.y - _headPoint.position.y;
+           Invoke("Objetotrg", _objetoTime);
+          // if(height > 0)
+          // {
+          //   collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 3, ForceMode2D.Impulse);
+          // }
+        }
     }
 
     void Update()

@@ -9,10 +9,19 @@ public class Item : MonoBehaviour
     [SerializeField] private int _valor;
     [SerializeField] MeshRenderer _textura; //textura
     [SerializeField] GameObject _partSaida; //ativar e desativar particula
+    //private SpriteRenderer _sprd;
+    //private CapsuleCollider2D _cpsl;
+    [SerializeField] public float _objetoTime;
+    [SerializeField] private TargetJoint2D _target;
+    [SerializeField] private BoxCollider2D _boxColl;
 
-    protected virtual void Start()
+    public void Start()
     {
-        _textura = GetComponent<MeshRenderer>(); //chama a textura
+        _target = GetComponent<TargetJoint2D>();
+        _boxColl = GetComponent<BoxCollider2D>();
+        //_sprd = GetComponent<SpriteRenderer>();
+        // _cpsl = GetComponent<CapsuleCollider2D>();
+        //_textura = GetComponent<MeshRenderer>(); //chama a textura
     }
 
     public virtual void DestroyItem()

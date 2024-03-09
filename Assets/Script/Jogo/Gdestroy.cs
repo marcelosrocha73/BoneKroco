@@ -23,7 +23,7 @@ public class Gdestroy : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "ground")
+        if (collision.gameObject.tag == "groundestroy")
         {
             Invoke("GroundDsty", _groundTime);
         }

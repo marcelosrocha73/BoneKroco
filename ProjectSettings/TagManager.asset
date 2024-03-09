@@ -8,6 +8,12 @@ TagManager:
   - Item
   - ground
   - gota
+  - deacai
+  - paresq
+  - pardir
+  - basemesa
+  - groundestroy
+  - maqacai
   layers:
   - Default
   - TransparentFX

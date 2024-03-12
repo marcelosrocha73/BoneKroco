@@ -77,7 +77,7 @@ public class Gota : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
-            Instantiate(_gota, transform.position, Quaternion.identity);
+           // Instantiate(_gota, transform.position, Quaternion.identity);
         }
     }
     void OnCollisionEnter2D(Collision2D collision)
@@ -95,7 +95,7 @@ public class Gota : MonoBehaviour
       {
              //_sprd.enabled = false;
              //_cpsl.enabled = false;
-            PontosGotas.instance._totalPontos += _pontos;
+          //  PontosGotas.instance._totalPontos += _pontos;
             PontosGotas.instance.UpdatePontoText();
             Destroy(gameObject);
       }

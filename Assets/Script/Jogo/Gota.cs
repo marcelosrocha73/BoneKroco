@@ -10,9 +10,9 @@ public class Gota : MonoBehaviour
     //private SpriteRenderer _sprd;
     //private CapsuleCollider2D _cpsl;
     Rigidbody2D _rgb;
-    public Transform _gota;
-    public int _pontos;
-    public GameObject prefab;
+    //public Transform _gota;
+    //public int _pontos;
+    //public GameObject prefab;
 
     //(1) www.youtube.com/watch?v=E7gmylDS1C4
     //public GameObject objetoPrefab;
@@ -20,10 +20,10 @@ public class Gota : MonoBehaviour
     //private Vector2 screenBounds;
 
     //(2) www.youtube.com/watch?v=j6p5Nh7JvmY
-    //public GameObject[] gotasPrefab;
-    //public float secondSpawn = 0.5f;
-    //public float minTrans;
-    //public float maxTrans;
+    public GameObject[] gotasPrefab;
+    public float secondSpawn = 0.5f;
+    public float minTrans;
+    public float maxTrans;
 
 
     void Start()
@@ -38,7 +38,7 @@ public class Gota : MonoBehaviour
         //instancia.transform.position = new Vector3(Random.Range(-0.0f, 0.0f), 0.0f, Random.Range(-0.0f, 0.0f));        //SceneManager.LoadScene(Random.Range(0, SceneManager.sceneCount));
         
         //(2)
-        //StartCoroutine(GotaSpawn()); //trava o jogo
+        StartCoroutine(GotaSpawn()); //trava o jogo
 
     }
 
@@ -59,7 +59,7 @@ public class Gota : MonoBehaviour
         }
     }*/
 
-    /*(2)
+    //(2)
     IEnumerator GotaSpawn()
     {
         while(true)
@@ -71,7 +71,6 @@ public class Gota : MonoBehaviour
             Destroy(gameObject, 5f);
         }
     }
-    */
 
     void Update()
     {

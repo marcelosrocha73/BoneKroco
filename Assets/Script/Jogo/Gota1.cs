@@ -29,24 +29,25 @@ public class Gota1 : MonoBehaviour
         Value = Random.Range(3, 6); //pontos
         Invoke("TimeG", Value);
         textMeshProUGUIVida.text = "" + Vida;
-
+        rig2.isKinematic = true;
+        Invoke("gotatime", 3);
     }
 
     void TimeG()
     {
-        Value1 = Random.Range(0, 6); //maquinas
+        Value1 = Random.Range(0, _transform.Length); //maquinas
         transform.localPosition = _transform[Value1].position;
       
         rig2.isKinematic = false;
         rig2.velocity = Vector2.zero;
-        GetComponent<SpriteRenderer>().enabled = true;
+      //  GetComponent<SpriteRenderer>().enabled = true;
         // Invoke("TimeG", Value);
     }
 
    
-    private void OnTriggerEnter2D(Collider2D collision) //potuou
+    private void OnTriggerEnter2D(Collider2D collision) 
     {
-        if (collision.gameObject.tag == "ground")
+        if (collision.gameObject.tag == "ground") //perdeu vida
         {
             Value = Random.Range(3, 6);
             Vida--;
@@ -62,19 +63,27 @@ public class Gota1 : MonoBehaviour
             Invoke("TimeG", Value);
         }
 
-        if (collision.gameObject.tag == "Cuia")
+        if (collision.gameObject.tag == "Cuia") //pontuar
         { 
             Pontos++;
             textMeshProUGUI.text = "" + Pontos;
             rig2.isKinematic = true;
-            GetComponent<SpriteRenderer>().enabled = false;
-           // Destroy(gameObject);
+            rig2.velocity = Vector2.zero;
+            //   GetComponent<SpriteRenderer>().enabled = false;
+            //Destroy(gameObject);
+
+            Invoke("TimeG", Value);
         }
     }
     
     public void ShowGameOver()
     {
         gameOver.SetActive(true);
+    }
+
+    public void gotatime()
+    {
+        rig2.isKinematic = false;
     }
 
     /*void OnCollisionEnter2D(Collision2D collision)

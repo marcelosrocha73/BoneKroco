@@ -35,7 +35,7 @@ public class Gota1 : MonoBehaviour
     void TimeG()
     {
         Value1 = Random.Range(0, 6); //maquinas
-        transform.position = _transform[Value1].localPosition;
+        transform.localPosition = _transform[Value1].position;
       
         rig2.isKinematic = false;
         rig2.velocity = Vector2.zero;
@@ -50,12 +50,12 @@ public class Gota1 : MonoBehaviour
         {
             Value = Random.Range(3, 6);
             Vida--;
-            if (Vida == 2) 
+            if (Vida == 0) 
             {
                 PontosGotas.instance.ShowGameOver(); //ativa painel de gameover
             }
             //Debug.Log("levou o farelo");
-            Destroy(gameObject);
+        //    Destroy(gameObject);
 
             textMeshProUGUIVida.text = "" + Vida;
 
@@ -68,7 +68,7 @@ public class Gota1 : MonoBehaviour
             textMeshProUGUI.text = "" + Pontos;
             rig2.isKinematic = true;
             GetComponent<SpriteRenderer>().enabled = false;
-            Destroy(gameObject);
+           // Destroy(gameObject);
         }
     }
     

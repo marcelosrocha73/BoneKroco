@@ -1,6 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using TMPro;
+
 
 public class Gdestroy : MonoBehaviour
 {
@@ -27,6 +31,14 @@ public class Gdestroy : MonoBehaviour
         {
             Invoke("GroundDsty", _groundTime);
         }
+
+       /* if (collision.gameObject.tag == "gota")
+        {
+                Debug.Log("Ze ruela, levou o farelo");
+                PontosGotas.instance.ShowGameOver();
+                Destroy(gameObject);
+        }*/
+     
     }
 
     void OnTriggerEnter2D(Collider2D collider)

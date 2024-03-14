@@ -14,6 +14,8 @@ TagManager:
   - basemesa
   - groundestroy
   - maqacai
+  - Cuia
+  - menuPrincipal
   layers:
   - Default
   - TransparentFX

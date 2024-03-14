@@ -79,7 +79,7 @@ public class Gota : MonoBehaviour
            // Instantiate(_gota, transform.position, Quaternion.identity);
         }
     }
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision) // nao capiturou gota
     {
         if (collision.gameObject.tag == "ground")
         {
@@ -88,7 +88,7 @@ public class Gota : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D collider)
+    void OnTriggerEnter2D(Collider2D collider) //pontuacao
     {
       if (collider.gameObject.tag == "Player")
       {

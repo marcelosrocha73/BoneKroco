@@ -9,6 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 6bf78506ec7e24446828c7432f9b4adb
   - enabled: 1
-    path: Assets/Scenes/AcaiCool.unity
+    path: Assets/Scenes/AcaiCoolNv1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

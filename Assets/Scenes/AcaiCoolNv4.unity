@@ -211,7 +211,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: AcaiCoolNv2
+          m_StringArgument: AcaiCoolNv4
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &7807109
@@ -1250,7 +1250,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.6
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1276,10 +1276,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rig2: {fileID: 663966397}
   Value: 0
-  Value1: 4
+  Value1: 3
   _transform:
   - {fileID: 722478255}
-  - {fileID: 1662315428}
   - {fileID: 1410180535}
   - {fileID: 2106977696}
   - {fileID: 253069026}
@@ -1581,7 +1580,7 @@ Transform:
   m_GameObject: {fileID: 737187065}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.06, y: 3.52, z: 0}
+  m_LocalPosition: {x: -1.22, y: 3.52, z: 0}
   m_LocalScale: {x: 1.1, y: 1.05, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2113,7 +2112,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1349893224
 Transform:
   m_ObjectHideFlags: 0
@@ -2123,7 +2122,7 @@ Transform:
   m_GameObject: {fileID: 1349893223}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.2, y: 3.52, z: 0}
+  m_LocalPosition: {x: -7.22, y: 3.52, z: 0}
   m_LocalScale: {x: 1.1, y: 1.05, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3215,7 +3214,7 @@ Transform:
   m_GameObject: {fileID: 1720108818}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.06, y: 3.52, z: 0}
+  m_LocalPosition: {x: -5.22, y: 3.52, z: 0}
   m_LocalScale: {x: 1.1, y: 1.05, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

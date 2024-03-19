@@ -38,7 +38,7 @@ public class ReturnoMenu : MonoBehaviour
     public void Sair()
     {
         Application.Quit();
-        Debug.Log("saiste do jogo");
+       // Debug.Log("saiste do jogo");
         SceneManager.LoadScene("Menu");
     }
 }

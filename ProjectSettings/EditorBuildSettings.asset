@@ -11,5 +11,20 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AcaiCoolNv1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/AcaiCoolNv2.unity
+    guid: 49cec66f00cb06b4698627bde96018b7
+  - enabled: 1
+    path: Assets/Scenes/AcaiCoolNv3.unity
+    guid: 4b6800ad282193d4080184c1013b11fe
+  - enabled: 1
+    path: Assets/Scenes/AcaiCoolNv4.unity
+    guid: 686cf3d77d51e274aafccb0b73365732
+  - enabled: 1
+    path: Assets/Scenes/AcaiCoolNv5.unity
+    guid: 859a68770a579e6458fcf0d14bbf7545
+  - enabled: 1
+    path: Assets/Scenes/AcaiCoolNv6.unity
+    guid: cc9209aa87da9ac4c962abf65b3a2043
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

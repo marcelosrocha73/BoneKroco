@@ -16,6 +16,7 @@ TagManager:
   - maqacai
   - Cuia
   - menuPrincipal
+  - 50
   layers:
   - Default
   - TransparentFX

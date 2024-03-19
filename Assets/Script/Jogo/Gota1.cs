@@ -8,13 +8,13 @@ using UnityEngine.SceneManagement;
 
 public class Gota1 : MonoBehaviour
 {
-    [SerializeField] Rigidbody2D rig2;
+    [SerializeField] Rigidbody2D rig2; //queda da gota
 
-    [SerializeField] int Value;
+    [SerializeField] int Value; // vida
 
-    [SerializeField] int Value1;
+    [SerializeField] int Value1; // gota
 
-    [SerializeField] Transform[] _transform;
+    [SerializeField] Transform[] _transform; //posicao da queda das gotas
 
     [SerializeField] TextMeshProUGUI textMeshProUGUI;
 
@@ -23,14 +23,14 @@ public class Gota1 : MonoBehaviour
     [SerializeField] int Pontos;
     [SerializeField] int Vida;
     public GameObject gameOver;
-
+    
     private void Start()
     {
-        Value = Random.Range(3, 6); //pontos
+        Value = Random.Range(0, 3); //vida
         Invoke("TimeG", Value);
         textMeshProUGUIVida.text = "" + Vida;
         rig2.isKinematic = true;
-        Invoke("gotatime", 3);
+        Invoke("gotatime", 3); //tempo para iniciar a queda da gota
     }
 
     void TimeG()
@@ -40,8 +40,7 @@ public class Gota1 : MonoBehaviour
       
         rig2.isKinematic = false;
         rig2.velocity = Vector2.zero;
-      //  GetComponent<SpriteRenderer>().enabled = true;
-        // Invoke("TimeG", Value);
+      
     }
 
    
@@ -49,15 +48,14 @@ public class Gota1 : MonoBehaviour
     {
         if (collision.gameObject.tag == "ground") //perdeu vida
         {
-            Value = Random.Range(3, 6);
+            Value = Random.Range(0, 3);
             Vida--;
             if (Vida == 0) 
             {
                 PontosGotas.instance.ShowGameOver(); //ativa painel de gameover
+             
             }
-            //Debug.Log("levou o farelo");
-        //    Destroy(gameObject);
-
+            
             textMeshProUGUIVida.text = "" + Vida;
 
             Invoke("TimeG", Value);
@@ -67,13 +65,23 @@ public class Gota1 : MonoBehaviour
         { 
             Pontos++;
             textMeshProUGUI.text = "" + Pontos;
-            rig2.isKinematic = true;
-            rig2.velocity = Vector2.zero;
-            //   GetComponent<SpriteRenderer>().enabled = false;
-            //Destroy(gameObject);
 
-            Invoke("TimeG", Value);
+            rig2.isKinematic = true; // capitura da gota na cuia
+            rig2.velocity = Vector2.zero;
+
+
+            if (collision.gameObject.tag == "Cuia") //passar de fase
+            {
+                if (Pontos == 25)
+                {
+                    //Debug.Log("va tomar seu açai");
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                }
+            }
+
+                Invoke("TimeG", Value);
         }
+
     }
     
     public void ShowGameOver()

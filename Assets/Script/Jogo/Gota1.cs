@@ -16,9 +16,9 @@ public class Gota1 : MonoBehaviour
 
     [SerializeField] Transform[] _transform; //posicao da queda das gotas
 
-    [SerializeField] TextMeshProUGUI textMeshProUGUI;
+    [SerializeField] TextMeshProUGUI textMeshProUGUI; //pontos
 
-    [SerializeField] TextMeshProUGUI textMeshProUGUIVida;
+    [SerializeField] TextMeshProUGUI textMeshProUGUIVida; //vida
 
     [SerializeField] int Pontos;
     [SerializeField] int Vida;
@@ -63,7 +63,7 @@ public class Gota1 : MonoBehaviour
 
         if (collision.gameObject.tag == "Cuia") //pontuar
         { 
-            Pontos++;
+            Pontos= Pontos+10; // soma pontos de 10 em 10
             textMeshProUGUI.text = "" + Pontos;
 
             rig2.isKinematic = true; // capitura da gota na cuia
@@ -72,10 +72,11 @@ public class Gota1 : MonoBehaviour
 
             if (collision.gameObject.tag == "Cuia") //passar de fase
             {
-                if (Pontos == 25)
+                if (Pontos == 20)
                 {
                     //Debug.Log("va tomar seu açai");
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                    //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                    SceneManager.LoadScene("PosFases");
                 }
             }
 

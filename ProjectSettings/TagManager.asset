@@ -17,6 +17,7 @@ TagManager:
   - Cuia
   - menuPrincipal
   - 50
+  - IniciarJogo
   layers:
   - Default
   - TransparentFX

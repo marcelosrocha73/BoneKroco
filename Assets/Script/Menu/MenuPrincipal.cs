@@ -17,6 +17,6 @@ public class MenuPrincipal : MonoBehaviour
 
    public void Jogar()
     {
-        SceneManager.LoadScene("AcaiCoolNv1");
+        SceneManager.LoadScene("EntreFases");
     }
 }

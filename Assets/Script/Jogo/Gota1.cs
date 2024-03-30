@@ -63,7 +63,7 @@ public class Gota1 : MonoBehaviour
 
         if (collision.gameObject.tag == "Cuia") //pontuar
         { 
-            Pontos= Pontos+10; // soma pontos de 10 em 10
+            Pontos = Pontos + 10; // soma pontos de 10 em 10
             textMeshProUGUI.text = "" + Pontos;
 
             rig2.isKinematic = true; // capitura da gota na cuia

@@ -12,7 +12,7 @@ public class MenuPrincipal : MonoBehaviour
    public void Sair()
     {
         Application.Quit();
-        Debug.Log("saiste do jogo");
+        //Debug.Log("saiste do jogo");
     }
 
    public void Jogar()

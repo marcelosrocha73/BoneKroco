@@ -23,6 +23,7 @@ public class Gota1 : MonoBehaviour
     [SerializeField] int Pontos;
     [SerializeField] int Vida;
     public GameObject gameOver;
+    public GameObject novaFase;
     
     private void Start()
     {
@@ -76,7 +77,9 @@ public class Gota1 : MonoBehaviour
                 {
                     //Debug.Log("va tomar seu açai");
                     //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-                    SceneManager.LoadScene("PosFases");
+                    PontosGotas.instance.ShowNovaFase();
+                    //SceneManager.LoadScene("PosFases");
+                    
                 }
             }
 

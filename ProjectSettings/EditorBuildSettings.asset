@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PosFases.unity
     guid: 55c8a2b4bc1dad24197064d74c0ead78
   - enabled: 1

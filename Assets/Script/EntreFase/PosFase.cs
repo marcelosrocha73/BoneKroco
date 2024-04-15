@@ -8,11 +8,12 @@ using TMPro;
 public class PosFase : MonoBehaviour
 {
     // public string NomeFase;
-    public float Tempoinic = 3.0f; //contagem do tempo
     //public GameObject Imagem; //colocar a camera
+    //public Image Imagem1; //colocar uma imagem
+    public float Tempoinic = 3.0f; //contagem do tempo
     public TextMeshProUGUI textMeshProUGUIAcai;
     public TextMeshProUGUI textMeshProUGUI; // mostra um texto
-    //public Image Imagem1; //colocar uma imagem
+    
 
         
     // Start is called before the first frame update
@@ -46,34 +47,5 @@ public class PosFase : MonoBehaviour
         }
 
     }
-    public void loadScene(string nome)
-    {
-        SceneManager.LoadScene(nome);
-    }
-
-    public void restartGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-
-    public void nextLevel()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-    /*public void calllevels()
-    {
-        SceneManager.LoadScene(GetInt("AcaiCoolNv") + 1);
-    }*/
-
-    public void Iniciar()
-    {
-        //SceneManager.LoadScene(nome);
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
-    }
-
-
-    /*public void LoadScenes(string cena)
-    {
-        SceneManager.LoadScene(cena);
-    }*/
+    
 }

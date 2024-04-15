@@ -11,6 +11,7 @@ public class PontosGotas : MonoBehaviour
     public TextMeshProUGUI pontosText;
 
     public GameObject gameOver;
+    public GameObject novaFase;
     
     public static PontosGotas instance;
 
@@ -31,6 +32,17 @@ public class PontosGotas : MonoBehaviour
     }
 
     public void RestartGame(string lvlName)
+    {
+        SceneManager.LoadScene(lvlName);
+    }
+
+    public void ShowNovaFase()
+    {
+        novaFase.SetActive(true);
+        
+    }
+
+    public void NewFase(string lvlName)
     {
         SceneManager.LoadScene(lvlName);
     }
